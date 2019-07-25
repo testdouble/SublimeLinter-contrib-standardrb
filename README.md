@@ -1,12 +1,6 @@
 SublimeLinter-contrib-standardrb
 ================================
 
------
-
-This plugin is almost entirely based on [SublimeLinter-Rubocop](https://github.com/SublimeLinter/SublimeLinter-rubocop)
-
------
-
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [standardrb](https://github.com/testdouble/standard). It will be used with files that have the `ruby`, `ruby on rails`, `rspec`, `betterruby`, `better rspec`, `ruby experimental` or `cucumber steps` syntaxes.
 
 ## Installation
@@ -66,7 +60,6 @@ One option for dealing with this overlap is to globally disable standard in your
 
 This will prevent SiblimeLinter from using Standard while continuing to allow Rubocop. For any project you'd like to lint with Standard instead of Rubocop, you can then add the following to your `*.sublime-project` settings, which will disable the Rubocop linter and enable Standard instead:
 
-"SublimeLinter.linters.standard.disable": true
 ```json
 {
     "settings": {
@@ -76,3 +69,6 @@ This will prevent SiblimeLinter from using Standard while continuing to allow Ru
 }
 
 ```
+-----
+
+This plugin is largely based on [SublimeLinter-Rubocop](https://github.com/SublimeLinter/SublimeLinter-rubocop)
