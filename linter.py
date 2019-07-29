@@ -2,7 +2,7 @@ import os
 from SublimeLinter.lint import RubyLinter
 
 
-class Standard(RubyLinter):
+class StandardRB(RubyLinter):
     defaults = {
         'selector': 'source.ruby - text.html - text.haml'
     }
@@ -15,7 +15,7 @@ class Standard(RubyLinter):
     def cmd(self):
         """Build command, using STDIN if a file path can be determined."""
 
-        settings = self.get_view_settings()
+        settings = self.settings
 
         command = ['ruby', '-S']
 
