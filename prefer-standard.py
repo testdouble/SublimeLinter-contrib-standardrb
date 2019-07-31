@@ -51,9 +51,10 @@ class StandardRBPreferStandardListener(sublime_plugin.EventListener):
         if not self.rubocop_installed:
             return False
 
-        # If rubocop is explicitly enabled / disabled we respect the user's
+        # If rubocop or standardrb is explicitly enabled / disabled we respect the user's
         # preference and leave things alone
-        if self.rubocop_disabled is not None:
+        if (self.rubocop_disabled is not None
+                or self.standard_disabled is not None):
             return False
 
         # If the user has not said that they want us to prefer standardrb then
