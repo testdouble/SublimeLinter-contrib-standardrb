@@ -30,9 +30,10 @@ class StandardRB(RubyLinter):
         path = self.filename
         if not path:
             # File is unsaved, and by default unsaved files use the default
-            # standard config because they do not technically belong to a folder
-            # that might contain a custom .standard.yml. This means the lint
-            # results may not match the rules for the currently open project.
+            # standard config because they do not technically belong to a
+            # folder that might contain a custom .standard.yml. This means the
+            # lint results may not match the rules for the currently open
+            # project.
             #
             # If the current window has open folders then we can use the
             # first open folder as a best-guess for the current projects
