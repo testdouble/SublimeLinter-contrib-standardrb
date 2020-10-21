@@ -17,7 +17,7 @@ class StandardRB(RubyLinter):
 
         settings = self.settings
 
-        command = ['ruby', '-S']
+        command = []
 
         if settings.get('use_bundle_exec', False):
             command.extend(['bundle', 'exec'])
