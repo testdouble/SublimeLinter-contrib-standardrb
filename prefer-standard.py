@@ -1,5 +1,6 @@
 import sys
 import os
+import sublime
 import sublime_plugin
 
 
@@ -8,14 +9,14 @@ class StandardRBPreferStandardListener(sublime_plugin.EventListener):
         self.view = view
         self.rubocop_installed = 'SublimeLinter-rubocop' in sys.modules
 
-        key = 'SublimeLinter.linters.rubocop.disable'
-        self.rubocop_disabled = view.settings().get(key)
+        plugin_settings = sublime.load_settings('SublimeLinter.sublime-settings')
+        linter_settings = plugin_settings.get('linters')
+        rubocop_settings = linter_settings.get('rubocop')
+        standardrb_settings = linter_settings.get('standardrb')
 
-        key = 'SublimeLinter.linters.standardrb.disable'
-        self.standard_disabled = view.settings().get(key)
-
-        key = 'SublimeLinter.linters.standardrb.prefer_standard'
-        self.should_prefer_standard = view.settings().get(key, False)
+        self.rubocop_disabled = rubocop_settings.get('disable')
+        self.standard_disabled = standardrb_settings.get('disable')
+        self.should_prefer_standard = standardrb_settings.get('prefer_standard', False)
 
         # Don't proceed if we shouldn't be selecting
         # a linter in the first place
