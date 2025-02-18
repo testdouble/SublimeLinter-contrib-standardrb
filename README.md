@@ -1,6 +1,14 @@
 SublimeLinter-contrib-standardrb
 ================================
 
+## ⛔ DEPRECATED ⛔
+
+SublimeLinter-contrib-standardrb is deprecated and unmaintained.
+
+We have no plans to hand off the package or resurrect it, but you are of course welcome to fork it.
+
+---
+
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [StandardRB](https://github.com/testdouble/standard). It will be used with files that have the `ruby`, `ruby on rails`, `rspec`, `betterruby`, `better rspec`, `ruby experimental` or `cucumber steps` syntaxes.
 
 ## Installation
